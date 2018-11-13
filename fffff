@@ -1,0 +1,77 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAaf8_vF3jIzxa--TWosgP31SixnZ0FHFk",
+    authDomain: "library-f5e2c.firebaseapp.com",
+    databaseURL: "https://library-f5e2c.firebaseio.com",
+    projectId: "library-f5e2c",
+    storageBucket: "library-f5e2c.appspot.com",
+    messagingSenderId: "460055008373"
+  };
+  firebase.initializeApp(config);
+
+
+firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+//user is signed in 
+        document.getElementById("main-page").style.diplay="block";
+        document.getElementById("form-login-username").style.display="none";
+    }else{
+//no user is signed in
+
+document.getElementById("main-page").style.display="none";
+document.getElementById("form-login-username").style.diplay="block";
+    }
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+/////////////////////////////////////////
+
+.display1 {
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.2;
+  color: #757575;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+
+.subhead {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.1;
+  font-weight: bold;
+  color: #212121;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  font: bold;
+  
+}
+.btn{
+    background-color: #000080;
+}
+.checkbox{
+    text-align: left;
+    padding-left: 20px;
+}
+.form-group{
+  text-align: left;
+  font-weight: none;
+}
+
+.main{
+  max-width: 100%;
+  border-radius: 2px;
+  margin: 150px auto;
+  padding: 70px;   
+  background-color: white; // Blue Grey 50
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19),
+  0 6px 6px rgba(0, 0, 0, .23); // shadow depth 3; 
+  background-color: #D2691E;
+  color:white;
+  font-size: 28px;
+    
+  }
+}
