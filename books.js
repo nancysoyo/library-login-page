@@ -20,9 +20,13 @@ var config = {
 
         $("#table_body").append("<tr><td>" + bookId +"</td><td>" + bookTitle +
         
-        "</td><td><button>remove</button></td></tr>");
+        "</td></tr>");
 
     });
 
     $('#table_id').DataTable();
+
+    //deleting data
+
+    
 } );
